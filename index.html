@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sergio Iglesias - IT Professional & Developer Portfolio">
+    <title>Sergio Iglesias | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="#" class="logo">SI</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="CV-Sergio-Iglesias.pdf.pdf" download class="btn-resume">Resume</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <img src="profile.png" alt="Sergio Iglesias" class="profile-img">
+                <h1 class="hero-title">Sergio Iglesias</h1>
+                <p class="hero-subtitle">IT Professional & Developer</p>
+                <p class="hero-description">
+                    Transitioning from hardware to software development with a focus on building practical solutions. 
+                    Currently working in IT while developing skills in web development, data analysis, and IT consulting.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I'm an IT professional currently working in quality control and system configuration, 
+                    where I handle BIOS updates, OS installations, and hardware troubleshooting. 
+                    My day-to-day involves ensuring computer systems are properly assembled and functional.
+                </p>
+                <p>
+                    I'm actively transitioning into software development, having completed a Higher Technician 
+                    degree in Web Application Development and starting a Computer Engineering degree in February 2026. 
+                    My goal is to combine technical expertise with strategic thinking in IT consulting and data analysis roles.
+                </p>
+                <p>
+                    Based in Schortens, Germany, I bring multicultural experience and adaptability, 
+                    always eager to learn new technologies and solve real-world problems through code.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-dark" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Check out my recent work</p>
+
+            <div class="projects-grid">
+                <!-- Project 1: Nutri-FIT-ON -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <h3>🏋️ Nutri-FIT-ON</h3>
+                        <span class="project-tag">Web App</span>
+                    </div>
+                    <p class="project-description">
+                        Comprehensive fitness calculator with calorie tracking, macronutrient analysis, 
+                        and body measurements. Features multilingual support (ES/EN/DE), progress tracking 
+                        with charts, PDF export, and dark mode.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Chart.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sergioiglesiasleite.github.io/fitness-calorie-calculator" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/sergioiglesiasleite/fitness-calorie-calculator" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Coming Soon -->
+                <div class="project-card project-card-placeholder">
+                    <div class="project-card-header">
+                        <h3>🚀 Coming Soon</h3>
+                        <span class="project-tag project-tag-soon">In Progress</span>
+                    </div>
+                    <p class="project-description">
+                        Currently working on new projects that will be showcased here soon. 
+                        Stay tuned for updates!
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">TBA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technologies I Work With</h2>
+            <p class="section-subtitle">Tools and technologies I'm actively learning and using</p>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">PHP</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Systems</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">GitHub</span>
+                        <span class="skill-item">Windows</span>
+                        <span class="skill-item">Linux</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Collaboration</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Jira</span>
+                        <span class="skill-item">Trello</span>
+                        <span class="skill-item">Slack</span>
+                        <span class="skill-item">Teams</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's connect and discuss opportunities</p>
+
+            <div class="contact-grid">
+                <a href="https://github.com/sergioiglesiasleite" target="_blank" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>@sergioiglesiasleite</p>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/sergio-iglesias" target="_blank" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p>sergio-iglesias</p>
+                    </div>
+                </a>
+
+                <a href="mailto:sergioiglesiasleite@gmail.com" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <div>
+                        <h3>Email</h3>
+                        <p>sergioiglesiasleite@gmail.com</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sergio Iglesias. Built with passion for clean code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
