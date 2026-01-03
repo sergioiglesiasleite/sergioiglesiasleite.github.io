@@ -43,3 +43,23 @@ window.addEventListener('scroll', () => {
 
     lastScroll = currentScroll;
 });
+
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+mobileToggle.addEventListener('click', () => {
+    mobileToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    document.body.classList.toggle('nav-open');
+});
+
+// Close mobile menu when clicking a link
+navLinksItems.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.classList.remove('nav-open');
+    });
+});
