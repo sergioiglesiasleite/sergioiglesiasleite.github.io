@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casos de producto — Sergio Iglesias Leite</title>
+<meta name="description" content="Siete decisiones de producto documentadas: qué problema apareció, qué decidí, qué descarté y qué coste acepté a cambio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap narrow">
+
+<nav>
+  <span class="me">Sergio Iglesias Leite</span>
+  <a href="index.html">Inicio</a>
+  <a href="nutreefit.html">Nutreefit</a>
+  <a href="globoom.html">Globoom</a>
+  <a href="casos.html" aria-current="page">Casos</a>
+</nav>
+
+<header>
+  <p class="eyebrow">Siete decisiones, con su coste</p>
+  <h1>Casos de producto</h1>
+  <p class="sub">Aquí no hay código: hay decisiones. Cada caso sigue la misma estructura, que es como trabajo: <strong>qué problema apareció, qué decidí, qué descarté y qué pasó después.</strong></p>
+  <p class="sub">Lo que separa estos casos de una lista de logros es que cada uno dice también <strong>qué acepté perder a cambio</strong>. Ninguna decisión de producto sale gratis; las que lo parecen es que no se han medido.</p>
+</header>
+
+<div class="casos">
+<article id="caso1">
+  <p class="tag">Caso 1 <span>· Nutreefit · Calidad de resultados y coste</span></p>
+  <h2>El buscador servía recetas sin el ingrediente que le habías pedido</h2>
+
+  <div class="bloque">
+    <h3>El problema</h3>
+    <p>Antes de llamar a la IA, la aplicación busca si ya existe una receta que sirva: si la encuentra, la reutiliza y se ahorra la llamada. El filtro devolvía resultados que no tenían nada que ver con lo pedido. Alguien pedía «tomate y aceite» y recibía platos sin tomate.</p>
+    <p>Lo encontré usando la aplicación yo mismo, no un test.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>El diagnóstico</h3>
+    <p>La causa no era el umbral de coincidencias, que es donde miré primero. Medí la frecuencia de cada ingrediente en la biblioteca y salió el dato que lo explicaba todo: <strong>el aceite aparece en el 60,7 % de las recetas</strong>. Con dos ingredientes pedidos, el umbral bajaba a uno, así que el aceite funcionaba como comodín universal: casi cualquier receta pasaba el filtro por el ingrediente que menos información aporta.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión</h3>
+    <p>Los ingredientes ubicuos dejan de contar para el filtro. De los que quedan, si son uno o dos, se exigen todos.</p>
+  </div>
+
+  <div class="coste">
+    <h3>El coste aceptado a sabiendas</h3>
+    <p>El porcentaje de peticiones que encuentran una receta reutilizable cae del 100 % al 65,7 %. Eso significa más llamadas a la IA y más coste. Lo acepté porque son dos problemas de naturaleza distinta: <strong>la tasa de acierto se recupera publicando más recetas; la confianza del usuario que recibe un plato equivocado no se recupera de ninguna manera.</strong></p>
+  </div>
+
+  <div class="cifras">
+    <div class="cifra"><span class="n">60,7&nbsp;<small>%</small></span><span class="l">de las recetas contenían aceite, el comodín que rompía el filtro</span></div>
+    <div class="cifra"><span class="n">13,4 → 0&nbsp;<small>%</small></span><span class="l">recetas servidas sin relación con lo pedido</span></div>
+    <div class="cifra"><span class="n">100 → 65,7&nbsp;<small>%</small></span><span class="l">reutilización, el precio pagado por el acierto</span></div>
+  </div>
+
+  <div class="bloque" style="margin-top:26px">
+    <h3>El resultado</h3>
+    <p>Las recetas servidas sin relación con lo pedido pasan del 13,4 % al 0 %, medido con un test que ejecuta peticiones reales contra la biblioteca.</p>
+  </div>
+</article>
+<article id="caso2">
+  <p class="tag">Caso 2 <span>· Nutreefit · Confianza y conversión</span></p>
+  <h2>Once textos prometían «ilimitado» sobre funciones que tenían tope</h2>
+
+  <div class="bloque">
+    <h3>El problema</h3>
+    <p>El plan de pago dejó de ser ilimitado cuando puse un techo de seguridad contra el uso automatizado. Corregí los dos textos del muro de pago y di el tema por cerrado. Al revisar la aplicación entera aparecieron <strong>diez textos más que seguían prometiendo lo contrario</strong>, y uno de ellos era el peor posible: el mensaje que lee el usuario justo en el momento en que agota su cuota, que es exactamente el instante en que decide si paga.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>Por qué era grave</h3>
+    <p>Pagar esperando algo ilimitado y encontrarte un límite al día siguiente no produce una queja: produce una devolución, una baja y una reseña de una estrella. Sale más caro que cualquier tope que pudieras estar protegiendo.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión</h3>
+    <p>Los textos dejan de escribir el número a mano y lo leen de la constante que define los límites de verdad. Y añadí un test que recorre la aplicación en los dos idiomas y falla si algún texto promete infinitud sobre algo que tiene tope. La lista de excepciones obliga a justificar por escrito cada «sin límite» que sí es cierto, y otro test detecta excepciones que ya no aplican.</p>
+  </div>
+
+  <div class="coste">
+    <h3>Lo que demuestra el resultado</h3>
+    <p>Al escribir ese test apareció <strong>una undécima promesa falsa</strong> que se me había pasado revisando a mano. Ese es el argumento entero: la revisión manual encontró diez de once. El automatismo no está para ahorrar trabajo, está porque yo no soy fiable haciendo esto a mano y el usuario paga mi error.</p>
+  </div>
+
+  <div class="cifras">
+    <div class="cifra"><span class="n">10 <small>de 11</small></span><span class="l">promesas falsas que encontró la revisión manual</span></div>
+    <div class="cifra"><span class="n">2</span><span class="l">idiomas recorridos por el test en cada ejecución</span></div>
+  </div>
+</article>
+<article id="caso3">
+  <p class="tag">Caso 3 <span>· Nutreefit · Descubribilidad</span></p>
+  <h2>La pantalla que explicaba los precios estaba donde nadie entra</h2>
+
+  <div class="bloque">
+    <h3>El problema</h3>
+    <p>Construí una pantalla que compara los dos planes y explica, sin adornos, que los anuncios están puestos para pagar el coste de la IA. Estaba bien escrita y no servía de nada: solo se llegaba a ella desde un texto gris al fondo del perfil, al lado de «Cerrar sesión», o desde el propio muro de pago, que es circular porque hay que querer pagar ya para enterarte de qué te dan.</p>
+    <p>Y encima había tres pantallas que le enseñan al usuario gratuito cuánta cuota le queda, y en ninguna de las tres podía preguntar qué pasa si paga. Estaba explicando el límite donde nadie entra y enseñándolo donde nadie podía preguntar.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión</h3>
+    <p>Los tres contadores de cuota pasan a ser el enlace. No añade un solo elemento a la interfaz: convierte en pulsable un texto que ya estaba ahí. Y llega <strong>antes</strong> de que el usuario se quede a cero, cuando todavía puede decidir con calma en vez de para desbloquear algo con prisa.</p>
+  </div>
+
+  <div class="coste">
+    <h3>Lo que decidí no hacer</h3>
+    <p>Meterlo en el onboarding, que es lo que pide el instinto. El onboarding es el momento de mayor abandono, y una aplicación que te enseña la tabla de precios antes que tu primera comida registrada se parece exactamente a las que este producto dice no querer parecerse. <strong>«Nada está escondido» no es lo mismo que «todo en tu cara».</strong></p>
+  </div>
+</article>
+<article id="caso4">
+  <p class="tag">Caso 4 <span>· Nutreefit · Modelo de negocio</span></p>
+  <h2>Rehacer el precio entero a cuatro días de publicar</h2>
+
+  <div class="bloque">
+    <h3>El problema</h3>
+    <p>Cada una de las 13 funciones de IA cuesta dinero real por uso. Ya había ajustado los límites una vez, y al recalcular con el coste real de generación antes de enviar a las tiendas salió que seguía sin cuadrar: el producto perdía dinero por usuario. Cuatro días antes de publicar.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión</h3>
+    <p>Construí un modelo de rentabilidad por usuario que enfrenta el coste de inferencia contra lo que queda de cada suscripción <strong>después</strong> de IVA y de la comisión de tienda. De ahí salieron dos reglas: un techo de coste por usuario, y un límite de uso propio para cada función, calibrado según lo que cuesta y lo que aporta, no igual para todas. Con el mismo modelo revisé el precio en unos 175 países y corregí aquellos que, con la fiscalidad y el tipo de cambio locales, no cubrían coste.</p>
+  </div>
+
+  <div class="coste">
+    <h3>Lo que descarté</h3>
+    <p>En algún momento de ese ajuste la salida fácil era quitar la publicidad y recortar las funciones de IA del plan gratuito. Habría cuadrado las cuentas y habría roto el posicionamiento entero del producto, que es que nada está escondido tras un muro de pago. <strong>Preferí tocar los límites y el precio antes que tocar la promesa.</strong></p>
+  </div>
+
+  <div class="cifras">
+    <div class="cifra"><span class="n">13</span><span class="l">funciones de IA, cada una con su propio límite calibrado</span></div>
+    <div class="cifra"><span class="n">~175</span><span class="l">países con el precio revisado uno a uno</span></div>
+    <div class="cifra"><span class="n">3</span><span class="l">veces recalculado el modelo, y las tres invalidó la anterior</span></div>
+  </div>
+
+  <div class="bloque" style="margin-top:26px">
+    <h3>Cómo quedó</h3>
+    <p>Suscripción más vídeo recompensado, dimensionados para que cada anuncio visto cubra el coste de la llamada de IA que desbloquea. El anuncio deja de ser un peaje arbitrario y pasa a ser la forma de que quien no paga siga teniendo acceso sin que el producto pierda dinero.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>Lo que aprendí</h3>
+    <p>El modelo de negocio no es un documento que se escribe una vez. Lo recalculé tres veces, y las tres aparecieron números que invalidaban la versión anterior. Un producto con coste variable por uso obliga a revisarlo cada vez que cambia una función, un modelo o un precio.</p>
+  </div>
+</article>
+<article id="caso5">
+  <p class="tag">Caso 5 <span>· Globoom · Monetización y retención</span></p>
+  <h2>Quitar el anuncio del momento en que el jugador está a punto de irse</h2>
+
+  <div class="bloque">
+    <h3>El problema</h3>
+    <p>Un arcade gratuito vive de la publicidad, y la configuración por defecto pone anuncios en todas partes: durante la partida, al morir, al reintentar. Es lo que más ingresos aparenta dar.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión</h3>
+    <p>Audité la carga publicitaria entera y la reduje. Nunca hay anuncios durante la partida. Dupliqué el periodo de gracia inicial, para que quien acaba de instalar el juego no vea publicidad antes de haber entendido de qué va. Y eliminé el anuncio al pulsar «reintentar».</p>
+  </div>
+
+  <div class="coste">
+    <h3>El razonamiento del último, que es el importante</h3>
+    <p>«Reintentar» se pulsa justo después de perder. Es el instante de máxima frustración y el más cercano a cerrar la aplicación para siempre. Meter ahí un anuncio es cobrarle un peaje a alguien que ya estaba decidiendo si seguir jugando. <strong>El ingreso de ese anuncio es inmediato y minúsculo; el jugador que se va no vuelve.</strong></p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión de fondo</h3>
+    <p>El objetivo de Globoom es demostrar capacidad de producto, no facturar. Tener el objetivo claro permitió una decisión que en otro contexto habría costado una discusión larga, y ese es el punto: <strong>cuando sabes qué métrica manda, las decisiones dejan de ser opiniones.</strong></p>
+  </div>
+
+  <div class="bloque">
+    <h3>Y la dificultad, por la misma lógica</h3>
+    <p>Bajé la curva de dificultad en tres iteraciones, cada una a partir de sesiones reales de juego en iPhone. La restricción que me impuse fue no compensar la bajada alargando los niveles: el producto está pensado para partidas cortas en el metro, así que la duración de la sesión era un requisito, no una variable con la que negociar.</p>
+  </div>
+</article>
+<article id="caso6">
+  <p class="tag">Caso 6 <span>· Globoom · Calidad y criterio de publicación</span></p>
+  <h2>El fallo que expulsaba en silencio a los mejores jugadores</h2>
+
+  <div class="bloque">
+    <h3>El problema</h3>
+    <p>En la revisión previa al lanzamiento encontré un fallo en la clasificación global que dejaba fuera, sin aviso de ningún tipo, a los jugadores con mejor puntuación.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>Por qué es el peor tipo de error</h3>
+    <p>No produce ningún síntoma visible. Nadie abre una incidencia, nadie escribe una reseña diciendo «no aparezco en el ranking»: simplemente dejan de competir y se van. Y afecta exactamente a los usuarios más comprometidos, que son los que sostienen un juego con clasificación.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión</h3>
+    <p>Se corrigió en la raíz, no con un parche en la superficie, y se protegió con tests automáticos para que no pueda volver. Fue un bloqueante de publicación explícito: no salía hasta estar arreglado.</p>
+  </div>
+
+  <div class="coste">
+    <h3>El criterio que hay detrás, y que uso en todo</h3>
+    <p><strong>Configurado no es lo mismo que verificado.</strong> Por eso Globoom salió solo en iPhone: iPad, Mac y Vision Pro quedaron fuera del lanzamiento porque no se habían probado en esos dispositivos, y prefiero publicar una plataforma menos antes que publicar una sin verificar. Android queda para una segunda fase.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>Cómo se gestionó la salida</h3>
+    <p>Roadmap y backlog documentados, bloqueantes de publicación explícitos y la release entera llevada de punta a punta: TestFlight, ficha de App Store Connect, capturas, clasificación por edad, consentimiento RGPD para publicidad y CI/CD en la nube.</p>
+  </div>
+</article>
+<article id="caso7">
+  <p class="tag">Caso 7 <span>· Nutreefit · Alcance y coste de moderación</span></p>
+  <h2>La comunidad que decidí no convertir en muro</h2>
+
+  <div class="bloque">
+    <h3>El problema</h3>
+    <p>La sección de comunidad hacía dos cosas distintas bajo la misma pestaña: compartir progresos, comidas y entrenamientos para motivar a otros, y encontrar con quién entrenar. Las dos suenan igual de inocentes. No lo son.</p>
+    <p>Lo vi preparando el lanzamiento, mirando la pantalla entera en vez de cada función por separado: el emparejamiento estaba acotado y bien resuelto, y lo demás era, de hecho, un muro de publicaciones libres con fotos.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>Por qué importa más aquí que en otro producto</h3>
+    <p>Un muro de contenido libre con fotos en una aplicación de nutrición no es un muro cualquiera. Es el vertical en el que aparece contenido pro-anorexia, déficits extremos presentados como logro y consejo médico de gente sin titulación. Es exactamente por lo que las tiendas miran estas aplicaciones con lupa.</p>
+    <p><strong>Y la moderación es el único coste que no puedo meter en mi modelo.</strong> Todo el precio de Nutreefit está construido sobre coste medido: cuánto cuesta cada llamada de IA, cuánto queda de cada suscripción tras el IVA y la comisión de tienda, qué techo de coste aguanta cada usuario. La moderación escala con los usuarios, no se automatiza barata, y la llevaría yo solo.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>La decisión</h3>
+    <p>Lo que se comparte deja de ser una publicación libre y pasa a ser un <strong>objeto estructurado</strong>: una receta o una rutina, etiquetada por objetivo. Quien está en déficit o en keto sigue encontrando ideas que funcionan —que era el motivo real de la función— pero el contenido se busca, se filtra y se modera con reglas. El texto libre con fotos no.</p>
+    <p>El emparejamiento se queda como estaba, porque ya estaba bien: se busca por ciudad y por deporte, y <strong>el chat solo se abre tras aceptación mutua</strong>. Esa condición es la que elimina el mensaje no solicitado, que es de donde sale casi todo el abuso en aplicaciones de fitness.</p>
+    <p>Y un límite de ámbito, escrito: el producto sirve para encontrar con quién entrenar. Lo que dos personas hagan después de quedar no es asunto del producto.</p>
+  </div>
+
+  <div class="coste">
+    <h3>El coste aceptado a sabiendas</h3>
+    <p>Un muro libre genera más contenido, más rápido y más viral que un catálogo de recetas etiquetadas. Renuncio a eso. <strong>Lo acepto porque el contenido que no puedo moderar no es un activo: es un pasivo con fecha de aparición desconocida</strong>, y porque una retirada de la tienda cuesta más que todo el crecimiento que ese muro pudiera darme.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>Lo que decidí no hacer</h3>
+    <p>Convertirlo en red social. Es lo que pide el instinto cuando ya tienes usuarios registrados, perfiles y contenido: parece que el siguiente paso es gratis. No lo es. Mi ventaja no son los efectos de red, es que los límites están calculados, y abrir un muro habría metido dentro del producto el único coste que no sé calcular.</p>
+  </div>
+
+  <div class="bloque">
+    <h3>Estado</h3>
+    <p>Decisión tomada en septiembre de 2026, antes del lanzamiento. <strong>La versión que está hoy en revisión todavía lleva el muro abierto</strong>, con el estado vacío que se ve en la captura de la página de Nutreefit; el cambio a contenido estructurado entra antes de publicar. Lo dejo dicho porque una decisión que todavía no se ha implementado no es un logro, es un plan.</p>
+  </div>
+</article>
+</div>
+
+<footer>
+  <p class="alcance">Nota de alcance: la arquitectura, las decisiones de producto y la validación son mías; la implementación se realiza con asistencia de IA sobre esas decisiones. No me presento como desarrollador: me presento como la persona que decide qué se construye.</p>
+  <p>Los repositorios son privados. Esta página publica el razonamiento, nunca código, y no describe ninguna vulnerabilidad sin cerrar de un producto en funcionamiento.</p>
+  <p><a href="index.html">← Volver al inicio</a> · <a href="nutreefit.html">Ver Nutreefit</a> · <a href="globoom.html">Ver Globoom</a></p>
+  <p>Última actualización: 13 de septiembre de 2026</p>
+</footer>
+
+</div>
+</body>
+</html>
