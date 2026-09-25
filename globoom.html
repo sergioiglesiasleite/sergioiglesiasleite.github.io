@@ -5,104 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Globoom — Sergio Iglesias Leite</title>
 <meta name="description" content="Arcade de partidas cortas para iPhone: qué resuelve, cómo funciona por dentro y las decisiones de monetización y calidad que lo dejaron así.">
+<meta property="og:title" content="Globoom — Sergio Iglesias Leite">
+<meta property="og:description" content="Arcade de partidas cortas para iPhone: qué resuelve, cómo funciona por dentro y las decisiones de monetización y calidad que lo dejaron así.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="site.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<div class="wrap wide">
-
-<nav>
-  <span class="me">Sergio Iglesias Leite</span>
-  <a href="index.html">Inicio</a>
-  <a href="nutreefit.html">Nutreefit</a>
-  <a href="globoom.html" aria-current="page">Globoom</a>
-  <a href="casos.html">Casos</a>
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="me" href="index.html">Sergio Iglesias Leite</a>
+    <a class="l" href="nutreefit.html">Nutreefit</a>
+    <a class="l" href="globoom.html" aria-current="page">Globoom</a>
+    <a class="l" href="casos.html">Casos</a>
+    <a class="l" href="index.html#contacto">Contacto</a>
+  </div>
 </nav>
-
-<header>
-  <p class="eyebrow">Producto propio · Publicidad y cosméticos · iPhone</p>
-  <h1>Globoom</h1>
-  <p class="sub">Arcade de partidas cortas, pensado para el trayecto en metro y para jugarse sin conexión.</p>
+<header class="phero gb">
+  <div class="wrap">
+    <div class="txt">
+      <div class="switch" aria-label="Cambiar de producto"><a href="nutreefit.html">Nutreefit</a><a href="globoom.html" aria-current="page">Globoom</a></div>
+      <span class="eyebrow">Producto propio · Publicidad y cosméticos · iPhone</span>
+      <h1>Globoom</h1>
+      <p class="lede">Arcade de partidas cortas, pensado para el trayecto en metro y para jugarse sin conexión.</p>
+      <div class="badges"><span>App Store · fuera de la UE</span><span>UE: pendiente de DSA</span><span>Solo iPhone</span></div>
+      
+    </div>
+    <div class="fan" aria-hidden="true"><div class="ph"><img src="img/gb-niveles.jpg" alt=""></div><div class="ph"><img src="img/gb-menu.jpg" alt=""></div><div class="ph"><img src="img/gb-tienda.jpg" alt=""></div></div>
+  </div>
 </header>
-
-<section>
-  <h2>Para qué momento está hecho</h2>
-  <div class="pitch"><p>Un juego no resuelve un problema: ocupa un hueco. El de Globoom es concreto y se puede describir: <strong>los cinco minutos muertos del metro, la cola del supermercado, la sala de espera.</strong> Un hueco en el que la cobertura falla, no apetece crear una cuenta y no hay tiempo para aprender nada.</p>
-      <p>Ese hueco es el que dicta las tres restricciones que mandan sobre todo lo demás del juego: <strong>la partida cabe dentro y no se alarga</strong> —por eso la dificultad se bajó sin tocar la duración de los niveles—, <strong>funciona sin conexión</strong>, y <strong>se juega desde el primer segundo</strong>: la clasificación global usa autenticación anónima, así que competir no cuesta rellenar un formulario.</p>
-      <p>Y lo que protege ese hueco es lo que el juego <strong>no</strong> hace. La configuración por defecto de la publicidad lo llena todo de anuncios porque es lo que más ingresos aparenta dar; aquí no hay ninguno durante la partida ni al reintentar. Si interrumpes un hueco de cinco minutos, ya no queda hueco.</p>
-      <p>Poder renunciar a esos ingresos sin discutirlo tiene una razón escrita: <strong>el objetivo de Globoom es demostrar capacidad de producto, no facturar.</strong> Cuando sabes qué métrica manda, las decisiones dejan de ser opiniones.</p></div>
-</section>
-
-<section>
-  <h2>El producto, pantalla a pantalla</h2>
-  <p class="lead">Capturas del juego real. Al lado de cada una, lo que hay detrás de lo que se ve — y de lo que deliberadamente no está.</p>
-  <div class="teardown">
-    <div class="shot"><img src="img/gb-menu.jpg" alt="Menú principal de Globoom con los modos de juego" loading="lazy"></div>
-    <div class="td-head"><span class="n">Pantalla 01 · Portada</span><h3>Tres modos para tres tipos de sesión</h3><p>No son tres formas de jugar lo mismo: son tres respuestas a cuánto tiempo tienes hoy.</p></div>
-    <div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>La sesión que dura semanas</h4><p>Modo Niveles: progresión larga, con mundos y jefes. Es lo que da la sensación de estar avanzando en algo.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>La sesión de cinco minutos</h4><p>Modo Hardcore, infinito y con clasificación global. Para cuando no quieres progresar, quieres competir.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>La sesión de un minuto</h4><p>Reto diario con racha y premio. Es la mecánica para el día en que no hay tiempo de jugar: abrir, jugar una vez, no perder la racha.</p></div><div class="note"><span class="num" aria-hidden="true">4</span><h4>El récord, en la portada</h4><p>No en un submenú de estadísticas. Es el número que hace volver, así que es lo último que se ve antes de pulsar.</p></div><div class="note"><span class="num" aria-hidden="true">5</span><h4>Opciones de anuncios a la vista</h4><p>Privacidad y opciones de publicidad enlazadas desde la portada, no enterradas en ajustes. El consentimiento RGPD hecho para que se use, no para cumplir el expediente.</p></div></div>
-  </div>
-  <div class="teardown flip">
-    <div class="shot"><img src="img/gb-niveles.jpg" alt="Selección de nivel con mundos, objetivos distintos y estrellas" loading="lazy"></div>
-    <div class="td-head"><span class="n">Pantalla 02 · Niveles</span><h3>Treinta niveles, no un nivel repetido treinta veces</h3><p>La diferencia entre una progresión y una lista está en si cada paso pide algo distinto.</p></div>
-    <div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Los mundos tienen nombre</h4><p>Génesis, Bastión. Un nombre se recuerda; «Mundo 2» no. Cuesta lo mismo y el jugador sabe decir dónde se quedó.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>Cada nivel pide otra cosa</h4><p>Llegar a puntos, encadenar un combo, aguantar 45 segundos, matar a un jefe. Si todos los niveles piden lo mismo, el jugador se va en el sexto.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>Las tres estrellas</h4><p>Son el único motivo para repetir un nivel ya superado. Sin ellas, el contenido se consume una vez y se acaba el juego.</p></div></div>
-  </div>
-  <div class="teardown">
-    <div class="shot"><img src="img/gb-partida.jpg" alt="Partida en curso con globos, obstáculos y potenciadores" loading="lazy"></div>
-    <div class="td-head"><span class="n">Pantalla 03 · Partida</span><h3>Lo que no hay en pantalla es la decisión</h3><p>Durante la partida no hay banner, ni intersticial, ni botón de comprar nada.</p></div>
-    <div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Vidas y puntuación, nada más</h4><p>Ni un banner. La configuración por defecto del SDK de anuncios sí lo pone; quitarlo fue una decisión explícita y cuesta ingresos.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>El objetivo siempre visible</h4><p>«Aguanta: 34s». La partida tiene una meta concreta en vez de solo un marcador que sube, que es lo que la hace terminable.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>Los potenciadores se ganan</h4><p>Ninguno se compra con dinero. En un juego con clasificación global, vender ventaja rompe la clasificación, que es justo lo que sostiene el modo infinito.</p></div></div>
-  </div>
-  <div class="teardown flip">
-    <div class="shot"><img src="img/gb-jefe.jpg" alt="Combate contra un jefe con barra de vida" loading="lazy"></div>
-    <div class="td-head"><span class="n">Pantalla 04 · Jefes</span><h3>Cambiar la regla, no subir el número</h3><p>Un jefe difícil no es un nivel normal con más globos. Es otro verbo.</p></div>
-    <div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Barra de vida del jefe</h4><p>Convierte el nivel en una carrera contra algo concreto en vez de contra un contador. El jugador ve cuánto le falta, y eso es lo que evita que abandone a la mitad.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>La regla se explica en pantalla</h4><p>«¡Toca al jefe para dañarlo!». Sin tutorial aparte y sin pantalla de ayuda: si una mecánica necesita un manual, el problema es la mecánica.</p></div></div>
-  </div>
-  <div class="teardown">
-    <div class="shot"><img src="img/gb-tienda.jpg" alt="Tienda de cosméticos pagados con puntos de juego" loading="lazy"></div>
-    <div class="td-head"><span class="n">Pantalla 05 · Tienda</span><h3>Una economía sin dinero dentro</h3><p>Todo se paga jugando. La escala de precios es lo que sostiene el modo infinito.</p></div>
-    <div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Saldo en puntos, no en monedas compradas</h4><p>No hay pasarela de pago en el juego. Los cosméticos son la recompensa de jugar, no un producto.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>Siempre algo alcanzable</h4><p>De 1.000 a 40.000 puntos. La escala está puesta para que el jugador tenga a la vez un objetivo a un par de partidas y otro a muchas: eso es lo que le da sentido al modo infinito.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>Lo equipado se marca, no se oculta</h4><p>Lo que ya tienes sigue en la tienda con su etiqueta. Ver lo conseguido al lado de lo que falta es lo que hace que la lista funcione como progresión.</p></div></div>
-  </div>
-  <div class="teardown flip">
-    <div class="shot"><img src="img/gb-boom.jpg" alt="Explosión en cadena al reventar globos" loading="lazy"></div>
-    <div class="td-head"><span class="n">Pantalla 06 · El momento</span><h3>Todo el juego existe para que esto pase a menudo</h3><p>Si tuviera que borrar todo salvo una cosa, sería esta.</p></div>
-    <div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>La reacción en cadena</h4><p>Es lo único que alguien recuerda de una partida. Las decisiones de dificultad, de duración de nivel y de potenciadores están todas calibradas para que esto ocurra a menudo pero no siempre.</p></div></div>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">Para qué momento está hecho</span></div>
+    <div class="pitch2 rv">
+      <p class="big">Un juego no resuelve un problema: <em>ocupa un hueco.</em></p>
+      <div class="rest"><p>Un juego no resuelve un problema: ocupa un hueco. El de Globoom es concreto y se puede describir: <strong>los cinco minutos muertos del metro, la cola del supermercado, la sala de espera.</strong> Un hueco en el que la cobertura falla, no apetece crear una cuenta y no hay tiempo para aprender nada.</p><p>Ese hueco es el que dicta las tres restricciones que mandan sobre todo lo demás del juego: <strong>la partida cabe dentro y no se alarga</strong> —por eso la dificultad se bajó sin tocar la duración de los niveles—, <strong>funciona sin conexión</strong>, y <strong>se juega desde el primer segundo</strong>: la clasificación global usa autenticación anónima, así que competir no cuesta rellenar un formulario.</p><p>Y lo que protege ese hueco es lo que el juego <strong>no</strong> hace. La configuración por defecto de la publicidad lo llena todo de anuncios porque es lo que más ingresos aparenta dar; aquí no hay ninguno durante la partida ni al reintentar. Si interrumpes un hueco de cinco minutos, ya no queda hueco.</p><p>Poder renunciar a esos ingresos sin discutirlo tiene una razón escrita: <strong>el objetivo de Globoom es demostrar capacidad de producto, no facturar.</strong> Cuando sabes qué métrica manda, las decisiones dejan de ser opiniones.</p></div>
+    </div>
   </div>
 </section>
-
-<section>
-  <h2>Decisiones documentadas</h2>
-  <p class="lead">Dos de los siete casos salen de aquí: uno de monetización y otro de criterio para publicar.</p>
-  <div class="dec">
-    <a href="casos.html#caso5"><span class="n">Caso 5 · Monetización y retención</span><span class="t">Quitar el anuncio del momento en que el jugador está a punto de irse</span><span class="d">Auditoría completa de la carga publicitaria: nunca durante la partida, periodo de gracia inicial duplicado y eliminado el anuncio al pulsar «reintentar». El ingreso de ese anuncio es inmediato y minúsculo; el jugador que se va no vuelve.</span></a>
-    <a href="casos.html#caso6"><span class="n">Caso 6 · Calidad y criterio de publicación</span><span class="t">El fallo que expulsaba en silencio a los mejores jugadores</span><span class="d">Un error en la clasificación global que dejaba fuera, sin aviso, a los jugadores con mejor puntuación. No produce ningún síntoma: simplemente dejan de competir. De ahí sale el criterio que uso en todo: configurado no es lo mismo que verificado.</span></a>
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">El producto, pantalla a pantalla</span><h2>Seis pantallas y lo que hay detrás</h2><p>Capturas del juego real. Al lado de cada una, lo que hay detrás de lo que se ve — y de lo que deliberadamente no está.</p></div>
+    <div class="viewer rv">
+      <div class="tabs" role="tablist" aria-label="Pantallas"><button class="tab" role="tab" type="button" aria-controls="pan0" id="tab0"><span class="n">Pantalla 01 · Portada</span><span class="t">Tres modos para tres tipos de sesión</span></button><button class="tab" role="tab" type="button" aria-controls="pan1" id="tab1"><span class="n">Pantalla 02 · Niveles</span><span class="t">Treinta niveles, no un nivel repetido treinta veces</span></button><button class="tab" role="tab" type="button" aria-controls="pan2" id="tab2"><span class="n">Pantalla 03 · Partida</span><span class="t">Lo que no hay en pantalla es la decisión</span></button><button class="tab" role="tab" type="button" aria-controls="pan3" id="tab3"><span class="n">Pantalla 04 · Jefes</span><span class="t">Cambiar la regla, no subir el número</span></button><button class="tab" role="tab" type="button" aria-controls="pan4" id="tab4"><span class="n">Pantalla 05 · Tienda</span><span class="t">Una economía sin dinero dentro</span></button><button class="tab" role="tab" type="button" aria-controls="pan5" id="tab5"><span class="n">Pantalla 06 · El momento</span><span class="t">Todo el juego existe para que esto pase a menudo</span></button></div>
+      <div><div class="panel" role="tabpanel" id="pan0" aria-labelledby="tab0">
+        <div class="shot"><img src="img/gb-menu.jpg" alt="Menú principal de Globoom con los modos de juego" loading="lazy"></div>
+        <div><div class="head"><span class="n">Pantalla 01 · Portada</span><h3>Tres modos para tres tipos de sesión</h3><p>No son tres formas de jugar lo mismo: son tres respuestas a cuánto tiempo tienes hoy.</p></div><div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>La sesión que dura semanas</h4><p>Modo Niveles: progresión larga, con mundos y jefes. Es lo que da la sensación de estar avanzando en algo.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>La sesión de cinco minutos</h4><p>Modo Hardcore, infinito y con clasificación global. Para cuando no quieres progresar, quieres competir.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>La sesión de un minuto</h4><p>Reto diario con racha y premio. Es la mecánica para el día en que no hay tiempo de jugar: abrir, jugar una vez, no perder la racha.</p></div><div class="note"><span class="num" aria-hidden="true">4</span><h4>El récord, en la portada</h4><p>No en un submenú de estadísticas. Es el número que hace volver, así que es lo último que se ve antes de pulsar.</p></div><div class="note"><span class="num" aria-hidden="true">5</span><h4>Opciones de anuncios a la vista</h4><p>Privacidad y opciones de publicidad enlazadas desde la portada, no enterradas en ajustes. El consentimiento RGPD hecho para que se use, no para cumplir el expediente.</p></div></div></div>
+      </div><div class="panel" role="tabpanel" id="pan1" aria-labelledby="tab1">
+        <div class="shot"><img src="img/gb-niveles.jpg" alt="Selección de nivel con mundos, objetivos distintos y estrellas" loading="lazy"></div>
+        <div><div class="head"><span class="n">Pantalla 02 · Niveles</span><h3>Treinta niveles, no un nivel repetido treinta veces</h3><p>La diferencia entre una progresión y una lista está en si cada paso pide algo distinto.</p></div><div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Los mundos tienen nombre</h4><p>Génesis, Bastión. Un nombre se recuerda; «Mundo 2» no. Cuesta lo mismo y el jugador sabe decir dónde se quedó.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>Cada nivel pide otra cosa</h4><p>Llegar a puntos, encadenar un combo, aguantar 45 segundos, matar a un jefe. Si todos los niveles piden lo mismo, el jugador se va en el sexto.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>Las tres estrellas</h4><p>Son el único motivo para repetir un nivel ya superado. Sin ellas, el contenido se consume una vez y se acaba el juego.</p></div></div></div>
+      </div><div class="panel" role="tabpanel" id="pan2" aria-labelledby="tab2">
+        <div class="shot"><img src="img/gb-partida.jpg" alt="Partida en curso con globos, obstáculos y potenciadores" loading="lazy"></div>
+        <div><div class="head"><span class="n">Pantalla 03 · Partida</span><h3>Lo que no hay en pantalla es la decisión</h3><p>Durante la partida no hay banner, ni intersticial, ni botón de comprar nada.</p></div><div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Vidas y puntuación, nada más</h4><p>Ni un banner. La configuración por defecto del SDK de anuncios sí lo pone; quitarlo fue una decisión explícita y cuesta ingresos.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>El objetivo siempre visible</h4><p>«Aguanta: 34s». La partida tiene una meta concreta en vez de solo un marcador que sube, que es lo que la hace terminable.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>Los potenciadores se ganan</h4><p>Ninguno se compra con dinero. En un juego con clasificación global, vender ventaja rompe la clasificación, que es justo lo que sostiene el modo infinito.</p></div></div></div>
+      </div><div class="panel" role="tabpanel" id="pan3" aria-labelledby="tab3">
+        <div class="shot"><img src="img/gb-jefe.jpg" alt="Combate contra un jefe con barra de vida" loading="lazy"></div>
+        <div><div class="head"><span class="n">Pantalla 04 · Jefes</span><h3>Cambiar la regla, no subir el número</h3><p>Un jefe difícil no es un nivel normal con más globos. Es otro verbo.</p></div><div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Barra de vida del jefe</h4><p>Convierte el nivel en una carrera contra algo concreto en vez de contra un contador. El jugador ve cuánto le falta, y eso es lo que evita que abandone a la mitad.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>La regla se explica en pantalla</h4><p>«¡Toca al jefe para dañarlo!». Sin tutorial aparte y sin pantalla de ayuda: si una mecánica necesita un manual, el problema es la mecánica.</p></div></div></div>
+      </div><div class="panel" role="tabpanel" id="pan4" aria-labelledby="tab4">
+        <div class="shot"><img src="img/gb-tienda.jpg" alt="Tienda de cosméticos pagados con puntos de juego" loading="lazy"></div>
+        <div><div class="head"><span class="n">Pantalla 05 · Tienda</span><h3>Una economía sin dinero dentro</h3><p>Todo se paga jugando. La escala de precios es lo que sostiene el modo infinito.</p></div><div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>Saldo en puntos, no en monedas compradas</h4><p>No hay pasarela de pago en el juego. Los cosméticos son la recompensa de jugar, no un producto.</p></div><div class="note"><span class="num" aria-hidden="true">2</span><h4>Siempre algo alcanzable</h4><p>De 1.000 a 40.000 puntos. La escala está puesta para que el jugador tenga a la vez un objetivo a un par de partidas y otro a muchas: eso es lo que le da sentido al modo infinito.</p></div><div class="note"><span class="num" aria-hidden="true">3</span><h4>Lo equipado se marca, no se oculta</h4><p>Lo que ya tienes sigue en la tienda con su etiqueta. Ver lo conseguido al lado de lo que falta es lo que hace que la lista funcione como progresión.</p></div></div></div>
+      </div><div class="panel" role="tabpanel" id="pan5" aria-labelledby="tab5">
+        <div class="shot"><img src="img/gb-boom.jpg" alt="Explosión en cadena al reventar globos" loading="lazy"></div>
+        <div><div class="head"><span class="n">Pantalla 06 · El momento</span><h3>Todo el juego existe para que esto pase a menudo</h3><p>Si tuviera que borrar todo salvo una cosa, sería esta.</p></div><div class="notes"><div class="note"><span class="num" aria-hidden="true">1</span><h4>La reacción en cadena</h4><p>Es lo único que alguien recuerda de una partida. Las decisiones de dificultad, de duración de nivel y de potenciadores están todas calibradas para que esto ocurra a menudo pero no siempre.</p></div></div></div>
+      </div></div>
+    </div>
   </div>
 </section>
-
-<section>
-  <h2>Cómo se llevó la publicación</h2>
-  <div class="feats">
-    <div><h3>Alcance recortado a propósito</h3><p>Salida solo en iPhone. iPad, Mac y Vision Pro quedaron fuera por no estar probados, y Android para una segunda fase. Prefiero publicar una plataforma menos antes que publicar una sin verificar.</p></div>
-    <div><h3>Bloqueantes explícitos</h3><p>Roadmap y backlog documentados, con una lista escrita de lo que impedía publicar. El fallo de la clasificación estaba en esa lista: no salía hasta estar arreglado.</p></div>
-    <div><h3>Release de punta a punta</h3><p>TestFlight, ficha de App Store Connect, capturas, clasificación por edad, consentimiento RGPD para publicidad y CI/CD en la nube.</p></div>
-    <div><h3>Sin login para competir</h3><p>La clasificación global usa autenticación anónima: el jugador nunca ve una pantalla de registro. Competir no debería costar un formulario.</p></div>
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">Publicación</span><h2>Cómo se llevó la publicación</h2></div>
+    <div class="feats"><div class="feat rv"><h3>Alcance recortado a propósito</h3><p>Salida solo en iPhone. iPad, Mac y Vision Pro quedaron fuera por no estar probados, y Android para una segunda fase. Prefiero publicar una plataforma menos antes que publicar una sin verificar.</p></div><div class="feat rv"><h3>Bloqueantes explícitos</h3><p>Roadmap y backlog documentados, con una lista escrita de lo que impedía publicar. El fallo de la clasificación estaba en esa lista: no salía hasta estar arreglado.</p></div><div class="feat rv"><h3>Release de punta a punta</h3><p>TestFlight, ficha de App Store Connect, capturas, clasificación por edad, consentimiento RGPD para publicidad y CI/CD en la nube.</p></div><div class="feat rv"><h3>Sin login para competir</h3><p>La clasificación global usa autenticación anónima: el jugador nunca ve una pantalla de registro. Competir no debería costar un formulario.</p></div></div>
   </div>
 </section>
-
-<section>
-  <h2>Estado</h2>
-  <div class="estado">
-    <p class="tag">A 20 de septiembre de 2026</p>
-    <p>Versión 1.0 aprobada en la App Store en septiembre de 2026 y disponible fuera de la Unión Europea. En la UE, incluida España, queda pendiente de que Apple valide el trámite del Reglamento de Servicios Digitales (DSA).</p>
-    <p>Todavía no hay datos de descargas ni de retención, y no aparece ninguno inventado.</p>
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">Decisiones documentadas</span><h2>Dos de los siete casos salen de aquí</h2><p>Cada uno con el problema, la decisión y el coste que acepté a cambio.</p></div>
+    <div class="mini rv"><a href="casos.html#caso5"><span class="fig">0</span><span class="n">Caso 5 · anuncios al perder o reintentar</span><h3>Quitar el anuncio del momento en que el jugador está a punto de irse</h3><p>Nunca hay anuncios durante la partida ni al pulsar «reintentar», el momento en que el jugador decide si se va.</p></a><a href="casos.html#caso6"><span class="fig">0</span><span class="n">Caso 6 · avisos: el fallo era silencioso</span><h3>El fallo que expulsaba en silencio a los mejores jugadores</h3><p>Un error de la clasificación dejaba fuera, sin aviso, a los mejores jugadores. Bloqueante de publicación: no salía hasta estar arreglado.</p></a></div>
+    <div class="more rv"><a class="btn ghost" href="casos.html#globoom">Ver los casos de Globoom →</a></div>
   </div>
 </section>
-
-<footer>
-  <p class="alcance">Nota de alcance: la arquitectura, las decisiones de producto y la validación son mías; la implementación se realiza con asistencia de IA sobre esas decisiones.</p>
-  <p><a href="index.html">← Volver al inicio</a> · <a href="nutreefit.html">Ver Nutreefit</a> · <a href="casos.html">Ver los siete casos</a></p>
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">Estado</span></div>
+    <div class="estado rv"><span class="when">A 20 de septiembre de 2026</span><div class="txt"><div><span class="pill"><i></i>App Store: fuera de la UE</span><span class="pill wait"><i></i>UE: pendiente de DSA</span></div><p>Versión 1.0 aprobada en la App Store en septiembre de 2026 y disponible fuera de la Unión Europea. En la UE, incluida España, queda pendiente de que Apple valide el trámite del Reglamento de Servicios Digitales (DSA).</p><p>Todavía no hay datos de descargas ni de retención, y no aparece ninguno inventado.</p></div></div>
+    <div class="nextp rv" style="margin-top:40px"><a class="btn ghost" href="index.html">← Inicio</a><a class="btn primary" href="nutreefit.html">Ver Nutreefit →</a></div>
+  </div>
+</section>
+<footer class="wrap">
+<p class="alcance">Nota de alcance: la arquitectura, las decisiones de producto y la validación son mías; la implementación se realiza con asistencia de IA sobre esas decisiones.</p>
+  <p>Última actualización: 25 de septiembre de 2026</p>
 </footer>
-
-</div>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+  } else document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});
+  /* visor de pantallas */
+  document.querySelectorAll('.viewer').forEach(function(v){
+    var tabs=[].slice.call(v.querySelectorAll('.tab')), panels=[].slice.call(v.querySelectorAll('.panel'));
+    function show(i,focus){tabs.forEach(function(t,j){t.setAttribute('aria-selected',j===i);t.tabIndex=j===i?0:-1});
+      panels.forEach(function(p,j){p.hidden=j!==i; if(j===i){p.classList.remove('fade');void p.offsetWidth;p.classList.add('fade')}});
+      if(focus) tabs[i].focus();}
+    tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i)});
+      t.addEventListener('keydown',function(e){var k=e.key; if(k==='ArrowDown'||k==='ArrowRight'){e.preventDefault();show((i+1)%tabs.length,1)}
+        if(k==='ArrowUp'||k==='ArrowLeft'){e.preventDefault();show((i-1+tabs.length)%tabs.length,1)}})});
+    v.classList.add('ready'); show(0);
+  });
+  /* casos: filtros y enlaces directos */
+  var fb=[].slice.call(document.querySelectorAll('.filters button'));
+  function filt(f){fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f)});
+    document.querySelectorAll('.crow').forEach(function(r){r.hidden=!(f==='todos'||r.dataset.p===f)});}
+  fb.forEach(function(b){b.addEventListener('click',function(){filt(b.dataset.f)})});
+  function fromHash(){var h=location.hash.slice(1); if(!h) return;
+    if(h==='nutreefit'||h==='globoom'){filt(h);return}
+    var el=document.getElementById(h); if(el&&el.tagName==='DETAILS'){filt('todos'); el.open=true; setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60)}}
+  addEventListener('hashchange',fromHash); fromHash();
+})();
+</script>
 </body>
 </html>

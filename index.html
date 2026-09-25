@@ -3,101 +3,232 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sergio Iglesias Leite — Producto</title>
-<meta name="description" content="Diseño y opero dos productos propios, con dos modelos de negocio distintos. Aquí están, y aquí están las decisiones que los hicieron así.">
-<meta property="og:title" content="Sergio Iglesias Leite — Producto">
-<meta property="og:description" content="Dos productos propios, dos modelos de negocio, y las decisiones documentadas con sus números.">
+<title>Sergio Iglesias Leite — Soporte técnico y producto</title>
+<meta name="description" content="Técnico de soporte N2 en Barcelona. Diseño y publico productos propios: Nutreefit, Globoom y una guía de montaje de PC en tres idiomas.">
+<meta property="og:title" content="Sergio Iglesias Leite — Soporte técnico y producto">
+<meta property="og:description" content="Soporte N2 bajo SLA, 2,5 años en Alemania y tres proyectos propios publicados.">
+<meta property="og:image" content="https://sergioiglesiasleite.github.io/img/pc-guide.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="site.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<div class="wrap">
 
-<nav>
-  <span class="me">Sergio Iglesias Leite</span>
-  <a href="index.html" aria-current="page">Inicio</a>
-  <a href="nutreefit.html">Nutreefit</a>
-  <a href="globoom.html">Globoom</a>
-  <a href="casos.html">Casos</a>
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="me" href="#top">Sergio Iglesias Leite</a>
+        <a class="l" href="#proyectos">Proyectos</a>
+    <a class="l" href="nutreefit.html">Nutreefit</a>
+    <a class="l" href="globoom.html">Globoom</a>
+    <a class="l" href="casos.html">Casos</a>
+    <a class="l" href="#contacto">Contacto</a>
+  </div>
 </nav>
 
-<header>
-  <h1>Decido qué se construye</h1>
-  <p class="sub">Soy técnico de soporte N2 y diseño y opero <strong>dos productos propios</strong>, cada uno con un modelo de negocio distinto: una plataforma de nutrición con suscripción y un juego de móvil monetizado con publicidad. De los dos llevo el alcance, el precio, las prioridades y qué se publica y qué no.</p>
-  <p class="sub">Esta página no es un currículum. Están los dos productos por dentro, y están las decisiones que los dejaron así, <strong>incluido lo que decidí perder a cambio</strong>.</p>
-  <p class="meta">
-    <span>Barcelona</span>
-    <a href="https://www.linkedin.com/in/sergio-iglesias/">linkedin.com/in/sergio-iglesias</a>
-    <a href="mailto:sergioiglesiasleite@gmail.com">sergioiglesiasleite@gmail.com</a>
-  </p>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker rv"><span class="dot"></span>Barcelona · abierto a nuevas oportunidades</span>
+      <h1 class="rv d1">Resuelvo lo que falla.<br><span class="accent">Construyo lo que falta.</span></h1>
+      <p class="intro rv d2">Soy <strong>técnico de soporte N2</strong>: diagnostico, resuelvo y documento incidencias bajo SLA. Fuera de ese trabajo diseño y publico <strong>productos propios</strong>, de la idea a la tienda de aplicaciones. Esta página es la puerta de entrada a los dos lados.</p>
+      <div class="cta rv d3">
+        <a class="btn primary" href="#proyectos">Ver proyectos ↓</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/sergio-iglesias/">LinkedIn ↗</a>
+        <a class="btn ghost" href="mailto:sergioiglesiasleite@gmail.com">Escríbeme</a>
+      </div>
+      <p class="langs rv d3" aria-label="Idiomas"><span><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#c60b1e"/><rect y="5" width="30" height="10" fill="#ffc400"/></svg>Español <b>nativo</b></span><span><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#ffce00"/><rect width="30" height="13.34" fill="#dd0000"/><rect width="30" height="6.67" fill="#000"/></svg>Alemán <b>B1+</b></span><span><svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="gbc"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#gbc)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>Inglés <b>B1</b></span></p>
+    </div>
+    <div class="collage rv d2" aria-hidden="true">
+      <div class="pc"><img src="img/pc-guide.jpg" alt=""><span>PC Assembly Field Guide</span></div>
+      <div class="phone a"><img src="img/nf-resumen.jpg" alt=""></div>
+      <div class="phone b"><img src="img/gb-menu.jpg" alt=""></div>
+    </div>
+  </div>
 </header>
 
-<section>
-  <h2>Los dos productos</h2>
-  <p class="lead">Uno cobra por suscripción y tiene que cubrir un coste variable de IA en cada uso. El otro es gratis y vive de la publicidad. Fijar el precio de los dos obliga a pensar de dos maneras opuestas.</p>
-
-  <div class="cards">
-    <a class="card" href="nutreefit.html">
-      <span class="kind">Suscripción · iOS, Android y web</span>
-      <h3>Nutreefit</h3>
-      <p>Plataforma de nutrición y entrenamiento con IA. Trece funciones de IA, cada una con su límite de uso calculado sobre lo que cuesta. Web operativa con cuenta unificada.</p>
-      <div class="shots">
-        <img src="img/nf-resumen.jpg" alt="Pantalla de resumen diario de Nutreefit" loading="lazy">
-        <img src="img/nf-dieta.jpg" alt="Pantalla de dieta de Nutreefit" loading="lazy">
-        <img src="img/nf-entrenos.jpg" alt="Pantalla de entrenamientos de Nutreefit" loading="lazy">
-      </div>
-      <span class="go">Ver el producto →</span>
-    </a>
-
-    <a class="card" href="globoom.html">
-      <span class="kind">Publicidad y cosméticos · iPhone</span>
-      <h3>Globoom</h3>
-      <p>Arcade de partidas cortas. 30 niveles en 6 mundos con jefes, modo infinito con clasificación global y una tienda de cosméticos que se paga jugando, no pagando.</p>
-      <div class="shots">
-        <img src="img/gb-menu.jpg" alt="Menú principal de Globoom" loading="lazy">
-        <img src="img/gb-partida.jpg" alt="Partida de Globoom" loading="lazy">
-        <img src="img/gb-tienda.jpg" alt="Tienda de cosméticos de Globoom" loading="lazy">
-      </div>
-      <span class="go">Ver el producto →</span>
-    </a>
+<section class="stats" aria-label="Cifras">
+  <div class="wrap">
+    <div class="stat rv"><span class="n" data-count="30">30</span><span class="l">incidencias semanales de nivel 2 bajo SLA</span></div>
+    <div class="stat rv d1"><span class="n" data-count="2.5" data-dec="1">2,5</span><span class="l">años de soporte y hardware en Alemania</span></div>
+    <div class="stat rv d2"><span class="n">8–10</span><span class="l">equipos montados al día, con un objetivo de 5</span></div>
+    <div class="stat rv d3"><span class="n" data-count="3">3</span><span class="l">proyectos propios publicados</span></div>
   </div>
 </section>
 
-<section>
-  <h2>Cómo decido</h2>
-  <p class="lead">Siete decisiones documentadas, cada una con el problema que la provocó, lo que descarté y el coste que acepté a sabiendas. Son lo que mejor explica cómo trabajo.</p>
-  <div class="dec">
-    <a href="casos.html#caso1">
-      <span class="n">Caso 1 · Nutreefit</span>
-      <span class="t">El buscador servía recetas sin el ingrediente que le habías pedido</span>
-      <span class="d">El aceite estaba en el 60,7 % de las recetas y funcionaba como comodín. Al excluir los ingredientes ubicuos, los resultados sin relación pasaron del 13,4 % al 0 % — a costa de reutilizar mucho menos y gastar más en IA.</span>
-    </a>
-    <a href="casos.html#caso4">
-      <span class="n">Caso 4 · Nutreefit</span>
-      <span class="t">Rehacer el precio entero a cuatro días de publicar</span>
-      <span class="d">El producto perdía dinero por usuario. Un modelo de rentabilidad por usuario, un techo de coste, un límite propio para cada una de las 13 funciones y el precio revisado en unos 175 países.</span>
-    </a>
-    <a href="casos.html#caso5">
-      <span class="n">Caso 5 · Globoom</span>
-      <span class="t">Quitar el anuncio del momento en que el jugador está a punto de irse</span>
-      <span class="d">«Reintentar» se pulsa justo después de perder. El ingreso de ese anuncio es inmediato y minúsculo; el jugador que se va no vuelve.</span>
-    </a>
-    <a href="casos.html">
-      <span class="n">Y cuatro más</span>
-      <span class="t">Ver los siete casos completos</span>
-      <span class="d">Promesas de «ilimitado» sobre funciones con tope, una pantalla de precios que estaba donde nadie entra, un fallo que expulsaba en silencio a los mejores jugadores, y la comunidad que decidí no convertir en muro.</span>
-    </a>
+<section class="sec" id="perfil">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Perfil</span>
+      <h2>Dos lados de la misma forma de trabajar</h2>
+      <p>En soporte aprendí a entender el problema antes de tocar nada. En mis productos lo aplico al revés: decidir qué se construye para que el problema no llegue.</p>
+    </div>
+    <div class="duo">
+      <article class="pane tech rv">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+        <h3>Soporte técnico</h3>
+        <p>Técnico informático de campo en una red bancaria: una sede distinta cada día y las actuaciones más complejas del equipo.</p>
+        <ul>
+          <li>Incidencias de principio a fin: diagnóstico, resolución, documentación en ServiceNow y escalado.</li>
+          <li>Despliegue de switches Cisco en rack y levantamiento de uplinks de fibra.</li>
+          <li>Diagnóstico de hardware a nivel de componente, sin sustituciones innecesarias.</li>
+          <li>Formación de técnicos nuevos y de usuarios, y redacción de procedimientos.</li>
+        </ul>
+        <div class="chips"><span>ServiceNow</span><span>Windows</span><span>Microsoft 365</span><span>Cisco</span><span>Hardware</span><span>SLA</span></div>
+      </article>
+      <article class="pane rv d1">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h3>Producto</h3>
+        <p>Diseño y opero dos aplicaciones propias con modelos de negocio opuestos, y documento cada decisión con sus números.</p>
+        <ul>
+          <li>Alcance, prioridades y qué se publica y qué no.</li>
+          <li>Precio y monetización calculados sobre coste real por usuario.</li>
+          <li>Validación con testers, releases y revisiones de App Store.</li>
+          <li>Documentación clara: casos de decisión y guías para usuarios.</li>
+        </ul>
+        <div class="chips"><span>Requisitos</span><span>Validación</span><span>Pricing</span><span>Releases</span><span>QA</span></div>
+      </article>
+    </div>
   </div>
 </section>
 
-<footer>
-  <p class="alcance">Nota de alcance: la arquitectura, las decisiones de producto y la validación son mías; la implementación se realiza con asistencia de IA sobre esas decisiones. No me presento como desarrollador: me presento como la persona que decide qué se construye.</p>
-  <p>Los repositorios son privados. Estas páginas publican el razonamiento, nunca código.</p>
-  <p>Última actualización: 20 de septiembre de 2026</p>
+<section class="sec" id="proyectos" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Proyectos</span>
+      <h2>Tres proyectos publicados, tres problemas distintos</h2>
+      <p>Una plataforma que cobra por suscripción, un juego gratuito que vive de la publicidad y una guía técnica para montar un PC sin romper nada.</p>
+    </div>
+    <div class="projects">
+      <a class="proj nf rv" href="nutreefit.html">
+        <div class="vis">
+          <span class="badge">App Store · UE pendiente de DSA</span>
+          <div class="ph"><img src="img/nf-dieta.jpg" alt="Pantalla de dieta de Nutreefit" loading="lazy"></div>
+          <div class="ph"><img src="img/nf-resumen.jpg" alt="Resumen diario de Nutreefit" loading="lazy"></div>
+          <div class="ph"><img src="img/nf-entrenos.jpg" alt="Entrenamientos de Nutreefit" loading="lazy"></div>
+        </div>
+        <div class="body">
+          <span class="kind">Suscripción · iOS, Android y web</span>
+          <h3>Nutreefit</h3>
+          <p>Plataforma de nutrición y entrenamiento con 13 funciones de IA, cada una con su límite de uso calculado sobre lo que cuesta.</p>
+          <span class="go">Ver el producto <i>→</i></span>
+        </div>
+      </a>
+      <a class="proj gb rv d1" href="globoom.html">
+        <div class="vis">
+          <span class="badge">App Store · UE pendiente de DSA</span>
+          <div class="ph"><img src="img/gb-niveles.jpg" alt="Mapa de niveles de Globoom" loading="lazy"></div>
+          <div class="ph"><img src="img/gb-partida.jpg" alt="Partida de Globoom" loading="lazy"></div>
+          <div class="ph"><img src="img/gb-tienda.jpg" alt="Tienda de Globoom" loading="lazy"></div>
+        </div>
+        <div class="body">
+          <span class="kind">Publicidad y cosméticos · iPhone</span>
+          <h3>Globoom</h3>
+          <p>Arcade de partidas cortas: 30 niveles en 6 mundos, modo infinito con clasificación global y sin anuncios durante la partida.</p>
+          <span class="go">Ver el producto <i>→</i></span>
+        </div>
+      </a>
+      <a class="proj pg rv d2" href="https://pc-assembly-standard.vercel.app/en/" target="_blank" rel="noopener">
+        <div class="vis">
+          <span class="badge">Web · ES / EN / DE</span>
+          <img src="img/pc-guide.jpg" alt="Montaje de un PC de sobremesa" loading="lazy">
+        </div>
+        <div class="body">
+          <span class="kind">Documentación técnica · proyecto personal</span>
+          <h3>PC Assembly Field Guide</h3>
+          <p>Guía de montaje, primer arranque, BIOS/UEFI e instalación de Windows 11, con diagramas y listas de comprobación interactivas.</p>
+          <span class="go">Abrir la guía <i>↗</i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Cómo decido</span>
+      <h2>Decisiones con números, no con intuiciones</h2>
+      <p>Siete casos documentados, cada uno con el problema, lo que descarté y el coste que acepté a sabiendas.</p>
+    </div>
+    <div class="cases">
+      <a class="case rv" href="casos.html#caso1">
+        <span class="big">13,4 % <small>→</small> 0 %</span>
+        <span class="n">Caso 1 · Nutreefit</span>
+        <h3>El buscador servía recetas sin el ingrediente que habías pedido</h3>
+        <p>Al excluir los ingredientes que aparecían en casi todas las recetas, los resultados sin relación desaparecieron.</p>
+      </a>
+      <a class="case rv d1" href="casos.html#caso4">
+        <span class="big">175 <small>países</small></span>
+        <span class="n">Caso 4 · Nutreefit</span>
+        <h3>Rehacer el precio entero a cuatro días de publicar</h3>
+        <p>El producto perdía dinero por usuario. Techo de coste, límite por función y precio revisado país a país.</p>
+      </a>
+      <a class="case rv d2" href="casos.html#caso5">
+        <span class="big">0 <small>anuncios al perder</small></span>
+        <span class="n">Caso 5 · Globoom</span>
+        <h3>Quitar el anuncio del momento en que el jugador está a punto de irse</h3>
+        <p>El ingreso de ese anuncio es inmediato y minúsculo; el jugador que se va no vuelve.</p>
+      </a>
+    </div>
+    <div class="more rv"><a class="btn ghost" href="casos.html">Ver los siete casos →</a></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Trayectoria</span>
+      <h2>De atender clientes a resolver lo que nadie quiere tocar</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl rv"><span class="when">2015 – 2023</span><h3>Atención al cliente</h3><p>Venta, logística y atención telefónica en España, Países Bajos y Alemania; un año como responsable de equipo.</p></div>
+      <div class="tl rv d1"><span class="when">2023 – 2026 · Alemania</span><h3>Técnico IT, hardware y soporte</h3><p>Mindfactory: referente del equipo en averías complejas y formación de técnicos, íntegramente en alemán.</p></div>
+      <div class="tl rv d2"><span class="when">2026 · Barcelona</span><h3>Técnico de soporte N2</h3><p>Grupo Saltó: soporte de campo bajo SLA para una red bancaria.</p></div>
+      <div class="tl rv d3"><span class="when">2026</span><h3>CFGS en Desarrollo de Aplicaciones Web</h3><p>Ilerna, titulado en agosto de 2026.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="contacto">
+  <div class="contact rv">
+    <h2>¿Hablamos?</h2>
+    <p>Busco un puesto de soporte técnico desde el que seguir creciendo hacia producto. Si encajo en lo que buscas, escríbeme.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:sergioiglesiasleite@gmail.com">sergioiglesiasleite@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/sergio-iglesias/">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p class="alcance">Nota de alcance: en Nutreefit y Globoom, la arquitectura, las decisiones de producto y la validación son mías; la implementación se realiza con asistencia de IA sobre esas decisiones. La guía de montaje es un proyecto personal independiente, no afiliado ni avalado por ninguna empresa en la que haya trabajado.</p>
+  <p>Los repositorios de las aplicaciones son privados; estas páginas publican el razonamiento, no el código.</p>
+  <p>Última actualización: 25 de septiembre de 2026</p>
 </footer>
 
-</div>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function count(el){
+    var end=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0), t0=null, dur=1200;
+    if(reduce) return;
+    function step(t){ if(!t0) t0=t; var p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3);
+      el.textContent=(end*e).toFixed(dec).replace('.',','); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(!en.isIntersecting) return; en.target.classList.add('in');
+      en.target.querySelectorAll('[data-count]').forEach(count);
+      if(en.target.dataset.count) count(en.target);
+      io.unobserve(en.target); });
+  },{threshold:.15, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>

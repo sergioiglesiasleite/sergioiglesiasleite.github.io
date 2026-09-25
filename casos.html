@@ -5,35 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Casos de producto — Sergio Iglesias Leite</title>
 <meta name="description" content="Siete decisiones de producto documentadas: qué problema apareció, qué decidí, qué descarté y qué coste acepté a cambio.">
+<meta property="og:title" content="Casos de producto — Sergio Iglesias Leite">
+<meta property="og:description" content="Siete decisiones de producto documentadas: qué problema apareció, qué decidí, qué descarté y qué coste acepté a cambio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="site.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<div class="wrap narrow">
-
-<nav>
-  <span class="me">Sergio Iglesias Leite</span>
-  <a href="index.html">Inicio</a>
-  <a href="nutreefit.html">Nutreefit</a>
-  <a href="globoom.html">Globoom</a>
-  <a href="casos.html" aria-current="page">Casos</a>
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="me" href="index.html">Sergio Iglesias Leite</a>
+    <a class="l" href="nutreefit.html">Nutreefit</a>
+    <a class="l" href="globoom.html">Globoom</a>
+    <a class="l" href="casos.html" aria-current="page">Casos</a>
+    <a class="l" href="index.html#contacto">Contacto</a>
+  </div>
 </nav>
-
-<header>
-  <p class="eyebrow">Siete decisiones, con su coste</p>
-  <h1>Casos de producto</h1>
-  <p class="sub">Aquí no hay código: hay decisiones. Cada caso sigue la misma estructura, que es como trabajo: <strong>qué problema apareció, qué decidí, qué descarté y qué pasó después.</strong></p>
-  <p class="sub">Lo que separa estos casos de una lista de logros es que cada uno dice también <strong>qué acepté perder a cambio</strong>. Ninguna decisión de producto sale gratis; las que lo parecen es que no se han medido.</p>
+<header class="chero">
+  <div class="wrap">
+    <span class="eyebrow rv">Siete decisiones, con su coste</span>
+    <h1 class="rv">Casos de producto</h1>
+    <p class="rv">Cada caso sigue la misma estructura, que es como trabajo: <strong>qué problema apareció, qué decidí, qué descarté y qué acepté perder a cambio.</strong> Ninguna decisión de producto sale gratis; las que lo parecen es que no se han medido.</p>
+    <div class="steps rv" aria-label="Estructura de cada caso"><span>Problema</span><span>Diagnóstico</span><span>Decisión</span><span class="hl">Coste aceptado</span><span>Resultado</span></div>
+  </div>
 </header>
-
-<div class="casos">
-<article id="caso1">
-  <p class="tag">Caso 1 <span>· Nutreefit · Calidad de resultados y coste</span></p>
-  <h2>El buscador servía recetas sin el ingrediente que le habías pedido</h2>
-
-  <div class="bloque">
+<main class="wrap" style="padding-bottom:40px">
+  <div class="filters" role="group" aria-label="Filtrar por producto">
+    <button type="button" data-f="todos" aria-pressed="true">Todos<span>7</span></button>
+    <button type="button" data-f="nutreefit" aria-pressed="false">Nutreefit<span>5</span></button>
+    <button type="button" data-f="globoom" aria-pressed="false">Globoom<span>2</span></button>
+  </div>
+  <div class="clist">
+    <details class="crow" id="caso1" data-p="nutreefit">
+      <summary>
+        <span class="no">1</span>
+        <div><span class="meta2"><b>Nutreefit</b> · Calidad de resultados y coste</span><h2>El buscador servía recetas sin el ingrediente que le habías pedido</h2><p class="one">El aceite estaba en el 60,7 % de las recetas y colaba platos sin relación. Resultados erróneos del 13,4 % al 0 %, a costa de reutilizar menos.</p></div>
+        <span class="figure">13,4 → 0 %<small>resultados sin relación</small></span>
+        <span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="cbody">
+<div class="bloque">
     <h3>El problema</h3>
     <p>Antes de llamar a la IA, la aplicación busca si ya existe una receta que sirva: si la encuentra, la reutiliza y se ahorra la llamada. El filtro devolvía resultados que no tenían nada que ver con lo pedido. Alguien pedía «tomate y aceite» y recibía platos sin tomate.</p>
     <p>Lo encontré usando la aplicación yo mismo, no un test.</p>
@@ -64,12 +77,18 @@
     <h3>El resultado</h3>
     <p>Las recetas servidas sin relación con lo pedido pasan del 13,4 % al 0 %, medido con un test que ejecuta peticiones reales contra la biblioteca.</p>
   </div>
-</article>
-<article id="caso2">
-  <p class="tag">Caso 2 <span>· Nutreefit · Confianza y conversión</span></p>
-  <h2>Once textos prometían «ilimitado» sobre funciones que tenían tope</h2>
-
-  <div class="bloque">
+<div class="links"><a class="btn ghost" href="nutreefit.html">Ver Nutreefit →</a></div>
+      </div>
+    </details>
+    <details class="crow" id="caso2" data-p="nutreefit">
+      <summary>
+        <span class="no">2</span>
+        <div><span class="meta2"><b>Nutreefit</b> · Confianza y conversión</span><h2>Once textos prometían «ilimitado» sobre funciones que tenían tope</h2><p class="one">Al poner un techo al plan de pago, once textos seguían prometiendo «ilimitado». La revisión manual encontró diez; el test automático, la undécima.</p></div>
+        <span class="figure">10 de 11<small>promesas falsas vistas a mano</small></span>
+        <span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="cbody">
+<div class="bloque">
     <h3>El problema</h3>
     <p>El plan de pago dejó de ser ilimitado cuando puse un techo de seguridad contra el uso automatizado. Corregí los dos textos del muro de pago y di el tema por cerrado. Al revisar la aplicación entera aparecieron <strong>diez textos más que seguían prometiendo lo contrario</strong>, y uno de ellos era el peor posible: el mensaje que lee el usuario justo en el momento en que agota su cuota, que es exactamente el instante en que decide si paga.</p>
   </div>
@@ -93,12 +112,18 @@
     <div class="cifra"><span class="n">10 <small>de 11</small></span><span class="l">promesas falsas que encontró la revisión manual</span></div>
     <div class="cifra"><span class="n">2</span><span class="l">idiomas recorridos por el test en cada ejecución</span></div>
   </div>
-</article>
-<article id="caso3">
-  <p class="tag">Caso 3 <span>· Nutreefit · Descubribilidad</span></p>
-  <h2>La pantalla que explicaba los precios estaba donde nadie entra</h2>
-
-  <div class="bloque">
+<div class="links"><a class="btn ghost" href="nutreefit.html">Ver Nutreefit →</a></div>
+      </div>
+    </details>
+    <details class="crow" id="caso3" data-p="nutreefit">
+      <summary>
+        <span class="no">3</span>
+        <div><span class="meta2"><b>Nutreefit</b> · Descubribilidad</span><h2>La pantalla que explicaba los precios estaba donde nadie entra</h2><p class="one">La pantalla que compara los planes solo era accesible desde sitios que nadie visita. Los contadores de cuota que ya existían pasan a ser el enlace.</p></div>
+        <span class="figure">0<small>elementos nuevos en la interfaz</small></span>
+        <span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="cbody">
+<div class="bloque">
     <h3>El problema</h3>
     <p>Construí una pantalla que compara los dos planes y explica, sin adornos, que los anuncios están puestos para pagar el coste de la IA. Estaba bien escrita y no servía de nada: solo se llegaba a ella desde un texto gris al fondo del perfil, al lado de «Cerrar sesión», o desde el propio muro de pago, que es circular porque hay que querer pagar ya para enterarte de qué te dan.</p>
     <p>Y encima había tres pantallas que le enseñan al usuario gratuito cuánta cuota le queda, y en ninguna de las tres podía preguntar qué pasa si paga. Estaba explicando el límite donde nadie entra y enseñándolo donde nadie podía preguntar.</p>
@@ -113,12 +138,18 @@
     <h3>Lo que decidí no hacer</h3>
     <p>Meterlo en el onboarding, que es lo que pide el instinto. El onboarding es el momento de mayor abandono, y una aplicación que te enseña la tabla de precios antes que tu primera comida registrada se parece exactamente a las que este producto dice no querer parecerse. <strong>«Nada está escondido» no es lo mismo que «todo en tu cara».</strong></p>
   </div>
-</article>
-<article id="caso4">
-  <p class="tag">Caso 4 <span>· Nutreefit · Modelo de negocio</span></p>
-  <h2>Rehacer el precio entero a cuatro días de publicar</h2>
-
-  <div class="bloque">
+<div class="links"><a class="btn ghost" href="nutreefit.html">Ver Nutreefit →</a></div>
+      </div>
+    </details>
+    <details class="crow" id="caso4" data-p="nutreefit">
+      <summary>
+        <span class="no">4</span>
+        <div><span class="meta2"><b>Nutreefit</b> · Modelo de negocio</span><h2>Rehacer el precio entero a cuatro días de publicar</h2><p class="one">El producto perdía dinero por usuario a cuatro días de publicar. Modelo de rentabilidad, límite por función y precio revisado país a país.</p></div>
+        <span class="figure">~175<small>países con el precio revisado</small></span>
+        <span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="cbody">
+<div class="bloque">
     <h3>El problema</h3>
     <p>Cada una de las 13 funciones de IA cuesta dinero real por uso. Ya había ajustado los límites una vez, y al recalcular con el coste real de generación antes de enviar a las tiendas salió que seguía sin cuadrar: el producto perdía dinero por usuario. Cuatro días antes de publicar.</p>
   </div>
@@ -148,12 +179,18 @@
     <h3>Lo que aprendí</h3>
     <p>El modelo de negocio no es un documento que se escribe una vez. Lo recalculé tres veces, y las tres aparecieron números que invalidaban la versión anterior. Un producto con coste variable por uso obliga a revisarlo cada vez que cambia una función, un modelo o un precio.</p>
   </div>
-</article>
-<article id="caso5">
-  <p class="tag">Caso 5 <span>· Globoom · Monetización y retención</span></p>
-  <h2>Quitar el anuncio del momento en que el jugador está a punto de irse</h2>
-
-  <div class="bloque">
+<div class="links"><a class="btn ghost" href="nutreefit.html">Ver Nutreefit →</a></div>
+      </div>
+    </details>
+    <details class="crow gbk" id="caso5" data-p="globoom">
+      <summary>
+        <span class="no">5</span>
+        <div><span class="meta2"><b>Globoom</b> · Monetización y retención</span><h2>Quitar el anuncio del momento en que el jugador está a punto de irse</h2><p class="one">Nunca hay anuncios durante la partida ni al pulsar «reintentar», el momento en que el jugador decide si se va.</p></div>
+        <span class="figure">0<small>anuncios al perder o reintentar</small></span>
+        <span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="cbody">
+<div class="bloque">
     <h3>El problema</h3>
     <p>Un arcade gratuito vive de la publicidad, y la configuración por defecto pone anuncios en todas partes: durante la partida, al morir, al reintentar. Es lo que más ingresos aparenta dar.</p>
   </div>
@@ -177,12 +214,18 @@
     <h3>Y la dificultad, por la misma lógica</h3>
     <p>Bajé la curva de dificultad en tres iteraciones, cada una a partir de sesiones reales de juego en iPhone. La restricción que me impuse fue no compensar la bajada alargando los niveles: el producto está pensado para partidas cortas en el metro, así que la duración de la sesión era un requisito, no una variable con la que negociar.</p>
   </div>
-</article>
-<article id="caso6">
-  <p class="tag">Caso 6 <span>· Globoom · Calidad y criterio de publicación</span></p>
-  <h2>El fallo que expulsaba en silencio a los mejores jugadores</h2>
-
-  <div class="bloque">
+<div class="links"><a class="btn ghost" href="globoom.html">Ver Globoom →</a></div>
+      </div>
+    </details>
+    <details class="crow gbk" id="caso6" data-p="globoom">
+      <summary>
+        <span class="no">6</span>
+        <div><span class="meta2"><b>Globoom</b> · Calidad y criterio de publicación</span><h2>El fallo que expulsaba en silencio a los mejores jugadores</h2><p class="one">Un error de la clasificación dejaba fuera, sin aviso, a los mejores jugadores. Bloqueante de publicación: no salía hasta estar arreglado.</p></div>
+        <span class="figure">0<small>avisos: el fallo era silencioso</small></span>
+        <span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="cbody">
+<div class="bloque">
     <h3>El problema</h3>
     <p>En la revisión previa al lanzamiento encontré un fallo en la clasificación global que dejaba fuera, sin aviso de ningún tipo, a los jugadores con mejor puntuación.</p>
   </div>
@@ -206,12 +249,18 @@
     <h3>Cómo se gestionó la salida</h3>
     <p>Roadmap y backlog documentados, bloqueantes de publicación explícitos y la release entera llevada de punta a punta: TestFlight, ficha de App Store Connect, capturas, clasificación por edad, consentimiento RGPD para publicidad y CI/CD en la nube.</p>
   </div>
-</article>
-<article id="caso7">
-  <p class="tag">Caso 7 <span>· Nutreefit · Alcance y coste de moderación</span></p>
-  <h2>La comunidad que decidí no convertir en muro</h2>
-
-  <div class="bloque">
+<div class="links"><a class="btn ghost" href="globoom.html">Ver Globoom →</a></div>
+      </div>
+    </details>
+    <details class="crow" id="caso7" data-p="nutreefit">
+      <summary>
+        <span class="no">7</span>
+        <div><span class="meta2"><b>Nutreefit</b> · Alcance y coste de moderación</span><h2>La comunidad que decidí no convertir en muro</h2><p class="one">Un muro libre con fotos en una app de nutrición es un riesgo que no puedo moderar solo. Contenido estructurado en lugar de publicaciones libres. Pendiente de implementar.</p></div>
+        <span class="figure">1<small>coste que no se puede modelar</small></span>
+        <span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </summary>
+      <div class="cbody">
+<div class="bloque">
     <h3>El problema</h3>
     <p>La sección de comunidad hacía dos cosas distintas bajo la misma pestaña: compartir progresos, comidas y entrenamientos para motivar a otros, y encontrar con quién entrenar. Las dos suenan igual de inocentes. No lo son.</p>
     <p>Lo vi preparando el lanzamiento, mirando la pantalla entera en vez de cada función por separado: el emparejamiento estaba acotado y bien resuelto, y lo demás era, de hecho, un muro de publicaciones libres con fotos.</p>
@@ -244,16 +293,45 @@
     <h3>Estado</h3>
     <p>Decisión tomada en septiembre de 2026, antes del lanzamiento. <strong>La versión aprobada por Apple todavía lleva el muro abierto</strong>, con el estado vacío que se ve en la captura de la página de Nutreefit: está pensado para recetas, progresos y entrenamientos, pero hoy nada impide publicar otra cosa y no hay moderación. El cambio a contenido estructurado está pendiente de implementar. Lo dejo dicho porque una decisión que todavía no se ha implementado no es un logro, es un plan.</p>
   </div>
-</article>
-</div>
-
-<footer>
-  <p class="alcance">Nota de alcance: la arquitectura, las decisiones de producto y la validación son mías; la implementación se realiza con asistencia de IA sobre esas decisiones. No me presento como desarrollador: me presento como la persona que decide qué se construye.</p>
+<div class="links"><a class="btn ghost" href="nutreefit.html">Ver Nutreefit →</a></div>
+      </div>
+    </details>
+  </div>
+</main>
+<footer class="wrap">
+<p class="alcance">Nota de alcance: la arquitectura, las decisiones de producto y la validación son mías; la implementación se realiza con asistencia de IA sobre esas decisiones No me presento como desarrollador: me presento como la persona que decide qué se construye.</p>
   <p>Los repositorios son privados. Esta página publica el razonamiento, nunca código, y no describe ninguna vulnerabilidad sin cerrar de un producto en funcionamiento.</p>
-  <p><a href="index.html">← Volver al inicio</a> · <a href="nutreefit.html">Ver Nutreefit</a> · <a href="globoom.html">Ver Globoom</a></p>
-  <p>Última actualización: 20 de septiembre de 2026</p>
+  <p>Última actualización: 25 de septiembre de 2026</p>
 </footer>
-
-</div>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+  } else document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});
+  /* visor de pantallas */
+  document.querySelectorAll('.viewer').forEach(function(v){
+    var tabs=[].slice.call(v.querySelectorAll('.tab')), panels=[].slice.call(v.querySelectorAll('.panel'));
+    function show(i,focus){tabs.forEach(function(t,j){t.setAttribute('aria-selected',j===i);t.tabIndex=j===i?0:-1});
+      panels.forEach(function(p,j){p.hidden=j!==i; if(j===i){p.classList.remove('fade');void p.offsetWidth;p.classList.add('fade')}});
+      if(focus) tabs[i].focus();}
+    tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i)});
+      t.addEventListener('keydown',function(e){var k=e.key; if(k==='ArrowDown'||k==='ArrowRight'){e.preventDefault();show((i+1)%tabs.length,1)}
+        if(k==='ArrowUp'||k==='ArrowLeft'){e.preventDefault();show((i-1+tabs.length)%tabs.length,1)}})});
+    v.classList.add('ready'); show(0);
+  });
+  /* casos: filtros y enlaces directos */
+  var fb=[].slice.call(document.querySelectorAll('.filters button'));
+  function filt(f){fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f)});
+    document.querySelectorAll('.crow').forEach(function(r){r.hidden=!(f==='todos'||r.dataset.p===f)});}
+  fb.forEach(function(b){b.addEventListener('click',function(){filt(b.dataset.f)})});
+  function fromHash(){var h=location.hash.slice(1); if(!h) return;
+    if(h==='nutreefit'||h==='globoom'){filt(h);return}
+    var el=document.getElementById(h); if(el&&el.tagName==='DETAILS'){filt('todos'); el.open=true; setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60)}}
+  addEventListener('hashchange',fromHash); fromHash();
+})();
+</script>
 </body>
 </html>
