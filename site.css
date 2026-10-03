@@ -143,7 +143,13 @@ img{max-width:100%; display:block}
   border:1px solid var(--line-strong); color:var(--ink-2); background:var(--paper)}
 
 /* projects */
-.projects{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+.projects{display:grid; grid-template-columns:repeat(2,1fr); gap:22px}
+.proj.co .vis{background:linear-gradient(160deg,#60754d,#243124)}
+.co{--p1:#60754d; --p2:#243124}
+.cato-shots{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; max-width:920px; margin:auto}
+.cato-shots img{width:100%; height:auto; border-radius:20px; border:1px solid var(--line)}
+.cato-shots figcaption{text-align:center; padding-top:12px; color:var(--ink-2)}
+@media(max-width:600px){.cato-shots{grid-template-columns:1fr; max-width:300px}}
 .proj{position:relative; display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line);
   border-radius:22px; overflow:hidden; text-decoration:none; color:inherit; box-shadow:var(--shadow);
   transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .35s}
