@@ -1,0 +1,3 @@
+# Jekyll omite las carpetas que empiezan por punto. Solo se añade .well-known (asociación de enlaces de apps iOS);
+# el resto del sitio se publica igual que antes.
+include: [".well-known"]

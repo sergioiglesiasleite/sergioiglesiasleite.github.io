@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["NZDV3AFAEG.com.sergi.adipina"],
+        "components": [
+          { "/": "/adipina-legal/", "?": { "sala": "??????" }, "comment": "AdiPiña: invitación a una sala" },
+          { "/": "/adipina-legal", "?": { "sala": "??????" }, "comment": "AdiPiña: invitación sin barra final" }
+        ]
+      }
+    ]
+  }
+}
